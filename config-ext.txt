@@ -195,7 +195,7 @@ user-manual C:\Program Files (x86)\Privoxy\doc\user-manual\
 #      shown.
 #
 #admin-address privoxy-admin@example.com
-admin-address privoxy-admin@proxy.trimoon.cloudns.eu
+admin-address privoxy-admin@proxy.tr.trimoon.cloudns.eu
 #
 #  1.4. proxy-info-url
 #  ====================
@@ -484,7 +484,7 @@ filterfile user.filter      # User customizations
 #      require additional software to do it. For details, please
 #      refer to the documentation for your operating system.
 #
-logfile privoxy.log
+logfile privoxy-ext.log
 #
 #  2.8. trustfile
 #  ===============
@@ -789,7 +789,7 @@ hostname proxy.trimoon.cloudns.eu
 #        listen-address [::1]:8118
 #
 #listen-address  127.0.0.1:8118
-listen-address  :8118
+listen-address  :8119
 #
 #  4.2. toggle
 #  ============
@@ -860,7 +860,7 @@ toggle  1
 #      feature, otherwise this option has no effect.
 #
 #enable-remote-toggle  0
-enable-remote-toggle  1
+enable-remote-toggle  0
 #
 #  4.4. enable-remote-http-toggle
 #  ===============================
@@ -899,7 +899,7 @@ enable-remote-toggle  1
 #      obsoleted by the more general header taggers.
 #
 #enable-remote-http-toggle  0
-enable-remote-http-toggle  1
+enable-remote-http-toggle  0
 #
 #  4.5. enable-edit-actions
 #  =========================
@@ -940,7 +940,7 @@ enable-remote-http-toggle  1
 #      feature, otherwise this option has no effect.
 #
 #enable-edit-actions 0
-enable-edit-actions 1
+enable-edit-actions 0
 #
 #  4.6. enforce-blocks
 #  ====================
@@ -1138,7 +1138,7 @@ permit-access  192.168.0.0/16
 #      buffer-limit Kbytes each, unless you have enabled
 #      "single-threaded" above.
 #
-buffer-limit 4096
+buffer-limit 8192
 #
 #  4.9. enable-proxy-authentication-forwarding
 #  ============================================
