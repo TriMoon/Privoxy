@@ -1,7 +1,7 @@
 ######################################################################
-# 
+#
 #  File        :  $Source: /cvsroot/ijbswa/current/user.action,v $
-# 
+#
 #  $Id: user.action,v 1.13 2011/11/06 11:36:01 fabiankeil Exp $
 #
 #  Purpose     :  User-maintained actions file, see
@@ -14,7 +14,7 @@
 # safe from updates to default.action.) Later defined actions always
 # take precedence, so anything defined here should have the last word.
 
-# See http://www.privoxy.org/user-manual/actions-file.html, or the 
+# See http://www.privoxy.org/user-manual/actions-file.html, or the
 # comments in default.action, for an explanation of what an "action" is
 # and what each action does.
 
@@ -38,12 +38,12 @@
 #
 # Alias names are not case sensitive.
 #
-# Aliases beginning with '+' or '-' may be used for system action names 
-# in future releases - so try to avoid alias names like this.  (e.g. 
+# Aliases beginning with '+' or '-' may be used for system action names
+# in future releases - so try to avoid alias names like this.  (e.g.
 # "+crunch-all-cookies" below is not a good name)
 #
 # Aliases must be defined before they are used.
-# 
+#
 # These aliases just save typing later:
 #
 +crunch-all-cookies = +crunch-incoming-cookies +crunch-outgoing-cookies
@@ -81,19 +81,29 @@ allow-ads   = -block -filter{banners-by-size} -filter{banners-by-link}
 # direction, and the processing of cookies to make them only temporary.
 #
 { allow-all-cookies }
-#.sourceforge.net
-#sunsolve.sun.com
-#slashdot.org
-#.yahoo.com
-#.msdn.microsoft.com
-#.redhat.com
+.arcgames.com
+.android.clients.google.com
+.afterworld.ru
+.doviz.com
+.facebook.com
+.finansbank.com.tr
+.innogames.de
+.joygame.com
+.pembepanjur.com
+.plarium.com
+.the-west.net
+.zirma.net
+www.mmorpg.com
+www.speedtest.net
 
 # Say the site where you do your homebanking needs to open popup
 # windows, but you have chosen to kill popups uncoditionally by default.
 # This will allow it for your-example-bank.com:
 #
 { -filter{all-popups} }
-.banking.example.com
+192.168.1.1
+192.168.1.254
+www.gameturk.com/portal/popup.js
 
 # Some hosts and some file types you may not want to filter for
 # various reasons:
@@ -121,12 +131,85 @@ stupid-server.example.com/
 # as set in default.action anyway:
 #
 { +block{Nasty ads.} }
-www.example.com/nasty-ads/sponsor.gif
+.ad-x.co.uk
+.adcolony.com
+.adkmob.com
+.adonline.e-kolay.net
+.ads.anyoption.it
+.ads.mopub.com
+.ads.mp.mydas.mobi
+.ads.yahoo.com
+.ads.yimg.com
+.ads.zynga.com
+.adtilt.com
+.amazon-adsystem.com
+.amplitude.com
+.ashleymadison.com
+.conduit.com
+.dbreklam2.net
+.doubleclick.net
+.facebook.com/plugins/ad_unit\.php.*
+.fastclick.net
+.gameloft.com/(ads/*|tralala/index\.php\?ad=*)
+.google-analytics.com
+.googleadservices.com
+.googlesyndication.com
+.googletagservices.com
+.heyzap.com
+.hotjar.com
+.hwcdn.net/bundles/.*\.zip
+.hwcdn.net/zen/*
+.inmobi.com
+.kontera.com
+.ksmobile.com
+.mobileapptracking.com
+.onlinewebstat.com
+.otomobilfirsati.com
+.outfit7.com/rest/.*/.*/(offers|videos)/*
+.quantserve.com
+.sayyac.com
+.startappservice.com
+.sourceforge.net
+.sponsorpay.com
+.tapjoyads.com
+.traffichaus.com
+.trafficstars.com
+.trovi.com
+.virgul.com
+.zynga.com/ajax/common_web:pixeltracking*
+api.vungle.com/api/.*/(new|requestAd|session.*)
+analytics.localytics.com
+analytics.yahoo.com
+cdn.outfit7.com/(promo-nc|vg|button)/*
+cm.ksmobile.com
+data.flurry.com
+delivery.reklamz.com
+hit.clickaider.com
+hitbox.com
+ingameads.gameloft.com
+inmobisdk-a.akamaihd.net
+live.chartboost.com
+marketing-ssl.upsight-api.com
+media.admob.com
+mobile-collector.newrelic.com
+propellerads.com
+ptreklam.com.tr
+ptreklamssp.com.tr
+reklam.memurlar.net
+reklamport.com
+reklamstore.com
+rubiconproject.com
+safebrowsing.google.com
+safebrowsing-cache.google.com
+static.everyplay.com/impact/*
+static.mapfactor.com/android-ads/*
+track.appsflyer.com
+www.finansbank.com.tr/banner/*
 
 # The URLs of dynamically generated banners, especially from large banner
 # farms, often don't use the well-known image file name extensions, which
 # makes it impossible for Privoxy to guess the file type just by looking
-# at the URL. 
+# at the URL.
 # You can use the +block-as-image alias defined above for these cases.
 # Note that objects which match this rule but then turn out NOT to be an
 # image are typically rendered as a "broken image" icon by the browser.
@@ -144,17 +227,53 @@ www.example.com/nasty-ads/sponsor.gif
 # 'fragile' aliases disables those actions that are most likely to break
 # a site. Also, good for testing purposes to see if it is Privoxy that
 # is causing the problem or not.
-# 
+#
 { fragile }
-#.forbes.com
+.kayseri.bel.tr
+.curse.com
+.aeriagames.com
+.gameloft.com/ads/adserver/web/fullscreen/*
+.gamersfirst.com
+.hdfilmsitesi.com.tr
+.hsbc.com
+.hsbc.com.tr
+.kabam.com
+.kocasinan.bel.tr
+.leagueoflegends.com
+.my.mail.ru
+.sahibinden.com
+.samfirmware.com
+.sammobile.com
+.samsung.com
+.samsungcsportal.com
+.static.pornhub.phncdn.com
+.the-west.net
+.trafficjunky.net
+.turkcell.com.tr
+.vk.com
+.wikia.com
+.xda-developers.com
+.accounts.firefox.com
+accounts.firefox.com
+autoupdate-revision.unity3d.com
+api.geo.kontagent.net
+canvas-live.gop3.nl
+cdnapi.kaltura.com
+download.windowsupdate.com
+minecraft.gamepedia.com
+o.gez.io
+perfectworld.vanillaforums.com/*
+shaiyatora.square7.ch
+tw-db.info
+www.dizitvhd.net
+# For our router
+192.168.1.1
 
 # Here are some sites we wish to support, and we will allow their ads
 # through.
 #
 { allow-ads }
-#.sourceforge.net
-#.slashdot.org
-#.osdn.net
+www.gameturk.com/portal/popup.js
 
 # user.action is generally the best place to define exceptions and
 # additions to the default policies of default.action. Some actions are
@@ -195,3 +314,31 @@ www.example.com/nasty-ads/sponsor.gif
 #
 #{+block{Facebook "like" and similar tracking URLs.}}
 #www.facebook.com/(extern|plugins)/(login_status|like(box)?|activity|fan)\.php
+
+#
+# Custom Forwarding rules for our setup
+#
+{+forward-override{forward-socks5t 127.0.0.1:9050 .} \
+}
+.apple.com
+.netflix.com
+.fastcdn.me
+.ggpht.com
+.google.com
+.googleapis.com
+.googleusercontent.com
+.gstatic.com
+.nakedtube.com
+.phncdn.com
+.pornhub.com
+.rncdn3.com
+.watchmygf.com
+.xhamster.com
+.youporn.com
+.youtube.com
+.trimoon.cloudns.eu
+.torproject.org
+.exit
+.onion
+cluster-5.skillclub.com
+songza.com
